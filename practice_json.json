@@ -1,0 +1,27 @@
+{
+    "name": "is key(name) and value(written txt here) pairs",
+    "age": 99,
+    "embedded_Object": {
+        "street": " 5 main st",
+        "city": "Space city"
+    },
+    "array of strings": ["first string", "second string"],
+    "array of numbers": [1, 2, 3],
+    "array of objects": [
+        {},
+        {},
+        {}
+    ],
+    "array of arrays": [
+        [],
+        [],
+        []
+    ],
+    "array of mixed": [
+        "string",
+        1,
+        {},
+        []
+    ]
+
+}
