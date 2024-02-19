@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Json Practice</title>
+</head>
+<body>
+    <ul id="people">
+
+    </ul>
+    
+    <script>
+
+        /*
+        var person = {
+            name: "Brad",
+            age: 35,
+            address: {
+                city: "New York",
+                state: "NY"
+            },
+            children: [ "Brianna", "Nicholas"]
+            // email: function() {
+            //     return 'joe@gmail.com';
+            // }
+        }
+
+        var people = [
+            {
+                name: "joe",
+                age: 34
+            },
+            {
+                name: "jane",
+                age: 35
+            },
+            {
+                name: "bob",
+                age: 36
+            }
+        ];
+
+        person = JSON.stringify(person); // converts javascript object into json string
+
+        
+
+        person = JSON.parse(person); // converts json string into javascript object
+
+        // console.log(person.email());
+        // console.log(person.address.city);
+        // console.log(person.children[0]);
+        // console.log(people[0].name)
+
+        var output = '';
+        for (var i = 0; i < people.length;i++)
+        {
+            // console.log(people[i].age)
+            output += '<li>'+people[i].name+'</li>';
+        }
+
+        document.getElementById('people').innerHTML = output;
+        */
+
+        const xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200)
+            {
+                const response = JSON.parse(xhttp.responseText);
+                // console.log(response.people)
+                const people = response.people;
+
+                var output = '';
+                for (var i = 0; i < people.length; i ++)
+                {
+                    output += '<li>'+people[i].name+'</li>';
+                }
+
+                document.getElementById('people').innerHTML = output;
+            }
+        }
+
+        xhttp.open("GET", "people.json", true);
+        xhttp.send();
+
+
+    </script>
+</body>
+</html>

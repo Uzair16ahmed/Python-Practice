@@ -151,16 +151,16 @@ def parse_csv_extend(filename, delimiter=',', comments='#'):
         for line in file:
             if line.startswith(comments): # skips the lines which start with # 
                 continue
-            print(line)
-            values = line.strip().split(delimiter) # split them into pieces and put these pieces in a list
+            print(line) # id,name,age,city
+            values = line.strip().split(delimiter) # split them into pieces and put these pieces in a list # ['id', 'name', 'age', 'city']
             print(values)
             csv_data.append(values) # putting these  values (lists) in our csv_data list
 
         return csv_data # returning the csv_data list
 
 
-print(parse_csv_extend('test.csv'))
-
-
-
+# print(parse_csv_extend('test.csv'))
+""" 
+[['id', 'name', 'age', 'city'], ['1', 'John Doe', '25', 'New York'], ['2', 'Jane Smith', '30', 'Los Angeles'], ['3', 'Michael Johnson', '28', 'Chicago'], ['4', 'Emily Brown', '35', 'Houston']]
+ """
 

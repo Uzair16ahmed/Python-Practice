@@ -8,7 +8,7 @@
     "array of strings": ["first string", "second string"],
     "array of numbers": [1, 2, 3],
     "array of objects": [
-        {},
+        {"child objects": " embed child object which are unordered collection of key/ value pairs"},
         {},
         {}
     ],
