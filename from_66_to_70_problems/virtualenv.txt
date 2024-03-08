@@ -1,0 +1,4 @@
+py -m venv .venv  (create a new virtual env by running the virtualenv command.)
+
+.venv\Scripts\activate (activate the virtual environment)
+
