@@ -136,3 +136,17 @@ if __name__ == "__main__":
         print_module_doc(module_name)
 
 """
+
+
+"""                 Installing third-party modules
+
+PyPI, The Python Package Index maintains the list of Python packages available.
+The third-party module developers usually register at PyPI and uploads their packages there. 
+
+"""
+
+
+""" Problem 70: Write a program csv2xls.py that reads a csv file and exports it as Excel file. The prigram should
+take two arguments. The name of the csv file to read as first argument and the name of the Excel file to write as
+the second argument. 
+"""
