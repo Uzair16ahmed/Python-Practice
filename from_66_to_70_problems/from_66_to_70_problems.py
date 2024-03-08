@@ -72,3 +72,35 @@ z = zipfile.ZipFile("from_66_to_70_problems/NotePad Information.zip")
 
 """ Problem 68: Write a python program zip.py to create a zip file. The program should take name of zip file as first
 argument and files to add as rest of the arguments. """
+
+"""
+import zipfile
+import sys
+import os
+
+def create_zip(zip_filename, files_to_add):
+    try:
+        with zipfile.ZipFile(zip_filename, 'w') as zipf:
+            for file in files_to_add:
+                if os.path.exists(file):
+                    zipf.write(file, os.path.basename(file))
+                else:
+                    print(f"File not found:", {file})
+    except Exception as e:
+        print(f"Error creating zip file: {e}")
+
+
+if __name__ == "__main__":
+    if len(sys.argv) < 3:
+        print("Usage: python create_zip.py <zip_filename> <files_to_add>")
+        sys.exit(1)
+    else:
+        zip_filename = sys.argv[1]
+        files_to_add = sys.argv[2:]
+        create_zip(zip_filename, files_to_add)
+ 
+"""
+
+""" Problem 69: Write a program mydoc.py to implement the functionality of pydoc. The program should take
+the module name as argument and print documentation for the module and each of the functions defined in that
+module """
